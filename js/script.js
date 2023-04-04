@@ -41,14 +41,17 @@ const createNote = () => {
     let str = ''
     let j = 0
     for (let i = 0; i < len; i++) {
-        str+=textArea.value[i]
-        if(j===21) {
+        if(j === 23) {
+			str+=textArea.value[i]
             if (str[i] !== ' '){
                 str += '-'
+				str += '\n'
             }
-            str+='\n'
-            j = -1
-        }
+            str += '\n'
+            j = 0
+        } else {
+			str+=textArea.value[i]
+		}
         j++
     }
 
